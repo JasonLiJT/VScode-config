@@ -55,7 +55,6 @@
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
     "python.pythonPath": "python3",
-    "python.linting.lintOnSave": false,
     "code-runner.preserveFocus": true,
     "code-runner.enableAppInsights": false,
     "terminal.integrated.fontSize": 14,
