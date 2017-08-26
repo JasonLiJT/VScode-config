@@ -60,5 +60,7 @@
     "terminal.integrated.fontSize": 14,
     "code-runner.customCommand": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt",
     "python.terminal.executeInFileDir": true,
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "editor.wordWrap": "on",
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
 }
