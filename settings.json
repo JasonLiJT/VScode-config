@@ -62,5 +62,22 @@
     "python.terminal.executeInFileDir": true,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "on",
-    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "launch": {
+        "version": "6.6.6",
+        "configurations": [
+            {
+                "name": "C++ (lldb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/${fileBasenameNoExtension}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "lldb"
+            }
+        ]
+    }
 }

@@ -35,10 +35,6 @@
         "command": "-code-runner.runCustomCommand"
     },
     {
-        "key": "ctrl+shift+alt+cmd+k",
-        "command": "workbench.action.terminal.kill"
-    },
-    {
         "key": "cmd+5",
         "command": "workbench.action.terminal.kill"
     },
@@ -63,5 +59,15 @@
     {
         "key": "cmd+3",
         "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+alt+cmd+b",
+        "command": "code-runner.runArgsCommand",
+        "args": "cd $dir && g++ -g $fileName -o $fileNameWithoutExt -std=c++14"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "code-runner.runArgsCommand",
+        "args": "echo Eureka"
     }
 ]
