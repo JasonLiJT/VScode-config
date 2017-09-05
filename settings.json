@@ -58,7 +58,7 @@
     "code-runner.preserveFocus": true,
     "code-runner.enableAppInsights": false,
     "terminal.integrated.fontSize": 14,
-    "code-runner.customCommand": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt",
+    "code-runner.customCommand": "cd $dir && g++ -Wall -std=c++14 $fileName -o $fileNameWithoutExt",
     "python.terminal.executeInFileDir": true,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "on",
