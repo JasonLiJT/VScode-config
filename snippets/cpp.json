@@ -2,8 +2,7 @@
 	"for": {
 		"prefix": "for",
 		"body": [
-			"for (int ${3:i} = ${1:0}; ${3:i} < ${2:length}; ${3:i}++)",
-			"{",
+			"for (int ${3:i} = ${1:0}; ${3:i} < ${2:length}; ${3:i}++) {",
 			"	$4",
 			"}"
 		],
@@ -12,8 +11,7 @@
 	"forr": {
 		"prefix": "forr",
 		"body": [
-			"for (int ${3:i} = ${1:length} - 1; ${3:i} >= ${2:0}; ${3:i}--)",
-			"{",
+			"for (int ${3:i} = ${1:length} - 1; ${3:i} >= ${2:0}; ${3:i}--) {",
 			"	$4",
 			"}"
 		],
@@ -22,8 +20,7 @@
 	"do": {
 		"prefix": "do",
 		"body": [
-			"do",
-			"{",
+			"do {",
 			"	$1",
 			"} while($2);"
 		],
@@ -32,8 +29,7 @@
 	"while": {
 		"prefix": "while",
 		"body": [
-			"while ($1)",
-			"{",
+			"while ($1) {",
 			"	$2",
 			"}"
 		],
@@ -42,9 +38,8 @@
 	"foreach": {
 		"prefix": "foreach",
 		"body": [
-			"for(auto ${var} : ${collection_to_loop})",
-			"{",
-			"	$1",
+			"for (auto ${2:var} : ${1:collection_to_loop}) {",
+			"	$3",
 			"}"
 		],
 		"description": "Code snippet for range-based for loop (c++11) statement"
@@ -52,8 +47,7 @@
 	"if": {
 		"prefix": "if",
 		"body": [
-			"if ($1)",
-			"{",
+			"if ($1) {",
 			"	$2",
 			"}"
 		],
@@ -62,18 +56,16 @@
 	"else": {
 		"prefix": "else",
 		"body": [
-			"else",
-			"{",
+			"else {",
 			"	$1",
 			"}"
 		],
 		"description": "Code snippet for else statement"
 	},
 	"else if": {
-		"prefix": "else if",
+		"prefix": "elif",
 		"body": [
-			"else if ($1)",
-			"{",
+			"else if ($1) {",
 			"	$2",
 			"}"
 		],
@@ -162,16 +154,16 @@
 		]
 	},
 	"#ifdef": {
-		"prefix": "#ifdef",
+		"prefix": "ifdef",
 		"body": [
-			"#ifdef ${DEBUG}",
-			"$1",
-			"#endif // ${DEBUG}"
+			"#ifdef ${1:DEBUG}",
+			"$2",
+			"#endif // ${1:DEBUG}"
 		],
 		"description": "Code snippet for #ifdef"
 	},
 	"#ifndef": {
-		"prefix": "#ifndef",
+		"prefix": "ifndef",
 		"body": [
 			"#ifndef ${1:1}",
 			"$2",
@@ -179,21 +171,11 @@
 		],
 		"description": "Code snippet for #ifndef"
 	},
-	"#if": {
-		"prefix": "#if",
-		"body": [
-			"#ifdef ${1:0}",
-			"$2",
-			"#endif // $1"
-		],
-		"description": "Code snippet for #if"
-	},
 	"struct": {
 		"prefix": "struct",
 		"body": [
-			"struct ${MyStruct}",
-			"{",
-			"	$1",
+			"struct ${1:MyStruct} {",
+			"	$2",
 			"};"
 		],
 		"description": "Code snippet for struct"
@@ -201,10 +183,11 @@
 	"switch": {
 		"prefix": "switch",
 		"body": [
-			"switch (${switch_on})",
-			"{",
-			"default:",
-			"	break;$1",
+			"switch (${1:switch_on}) {",
+			"	case $2:",
+			"		$3",
+			"		break;"
+			"	${4:default:\n		$5\n		break;}",
 			"}"
 		],
 		"description": "Code snippet for switch statement"
@@ -241,14 +224,14 @@
 		"description": "Code snippet for printing to std::cout, provided the header is set"
 	},
 	"#inc": {
-		"prefix": "#inc",
+		"prefix": "include",
 		"body": [
 			"#include \"$1\""
 		],
 		"description": "Code snippet for #include \" \""
 	},
 	"#inc<": {
-		"prefix": "#inc<",
+		"prefix": "inc",
 		"body": [
 			"#include <$1>"
 		],
