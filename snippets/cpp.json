@@ -235,6 +235,6 @@
 		"body": [
 			"#include <$1>"
 		],
-		"description": "Code snippet for #include \" \""
+		"description": "Code snippet for #include < >"
 	}
 }
