@@ -17,7 +17,7 @@
         "cpp": "$dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
-        "python": "python3 -i",
+        "python": "cd $dir && python3 -i $fileName",
         "perl": "perl",
         "ruby": "ruby",
         "go": "go run",
