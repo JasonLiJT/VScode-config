@@ -70,12 +70,12 @@
                 "name": "C++ (lldb) Launch",
                 "type": "cppdbg",
                 "request": "launch",
-                "program": "${workspaceRoot}/${fileBasenameNoExtension}",
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
                 "args": [],
                 "stopAtEntry": false,
                 "cwd": "${workspaceRoot}",
                 "environment": [],
-                "externalConsole": false,
+                "externalConsole": true,
                 "MIMode": "lldb"
             }
         ]
