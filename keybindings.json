@@ -1,16 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "alt+space",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+space",
-        "command": "-editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "cmd+k cmd+b",
         "command": "workbench.action.toggleSidebarVisibility"
     },
