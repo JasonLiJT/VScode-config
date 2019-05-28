@@ -1,5 +1,4 @@
 {
-    "workbench.iconTheme": "vscode-icons",
     "editor.multiCursorModifier": "ctrlCmd",
     "C_Cpp.intelliSenseEngine": "Default",
     "workbench.colorTheme": "Monokai",
@@ -45,4 +44,12 @@
     },
     "code-runner.terminalRoot": "/",
     "python.terminal.activateEnvironment": false,
+    "python.linting.pylintArgs": [
+        // whitelist numpy to remove lint errors
+        "--extension-pkg-whitelist=numpy,wx,OpenGL.GLUT",
+
+        // Default has to be manually added if "python.linting.pylintArgs" is specified
+        "--disable=all",
+        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,unused-variable,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
+    ]
 }
